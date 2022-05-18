@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1125" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/drawable/ic_baseline_play_circle_24.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/drawable/ic_baseline_playlist_add_24.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/drawable/ic_baseline_skip_next_24.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/drawable/ic_baseline_skip_previous_24.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1125" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/drawable/mybutton.xml" value="0.1125" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/drawable/round_button.xml" value="0.1125" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/layout/fragment_calc_constr_lay.xml" value="0.16" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/layout/fragment_calc_no_constr_lay.xml" value="0.13243243243243244" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/layout/fragment_face_book_constr_lay.xml" value="0.2" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/layout/fragment_facebook_no_constr_lay.xml" value="0.13243243243243244" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/layout/fragment_main.xml" value="0.25" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/layout/fragment_player_constr_lay.xml" value="0.17" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/layout/fragment_player_no_constr_lay.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/layout/fragment_telegram_constr_lay.xml" value="0.18" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/layout/fragment_telegram_no_constr_lay.xml" value="0.16" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/layout/header_telegram.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/79992/AndroidStudioProjects/AndroidUI2/WildberriesWeekThree/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2203125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

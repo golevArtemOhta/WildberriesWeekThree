@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="With ConstraintLayout"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnFacebookConstrLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Facebook ConstraintLayout" />
+
+        <Button
+            android:id="@+id/btnCalcConstrLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculator ConstraintLayout" />
+
+        <Button
+            android:id="@+id/btnTelegramConstrLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telegram ConstraintLayout" />
+
+        <Button
+            android:id="@+id/btnPlayerConstrLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player ConstraintLayout" />
+
+        <TextView
+            android:id="@+id/textViewWithOutConstrLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Without ConstraintLayout"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnFacebookNoConstrLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Facebook without ConstraintLayout" />
+
+        <Button
+            android:id="@+id/btnCalcNoConstrLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculator without ConstraintLayout" />
+
+        <Button
+            android:id="@+id/btnTelegramNoConstrLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telegram without ConstraintLayout" />
+
+        <Button
+            android:id="@+id/btnPlayerNoConstrLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player without ConstraintLayout" />
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

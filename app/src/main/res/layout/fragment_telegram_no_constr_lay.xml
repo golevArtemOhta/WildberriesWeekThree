@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelegramNoConstrLayFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_telegram"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_alignParentTop="true" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/im_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/im_btn_qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toLeftOf="@+id/im_btn_search"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_qr_code_24"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/im_btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toLeftOf ="@+id/im_btn_dots"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_search_24"
+
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/im_btn_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:layout_marginStart="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/im_avatar"
+                android:layout_below="@+id/im_btn_bac"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                tools:src="@tools:sample/avatars" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/im_btn_qrcode"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/cardView_avatar"
+            android:text="Артем Голев"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Online"
+            android:textSize="14dp"
+            android:layout_toRightOf="@+id/cardView_avatar"
+            android:layout_below="@+id/tv_name"
+            android:textColor="@color/white"
+            android:layout_marginStart="30dp"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_for_camera"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="16dp"
+            >
+            <ImageView
+                android:id="@+id/im_camera"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                tools:layout_editor_absoluteX="280dp"
+                tools:layout_editor_absoluteY="135dp"
+                tools:src="@drawable/ic_baseline_camera_alt_24" />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Account"
+            android:layout_below="@+id/header"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/telegram_blue"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/account"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/black"
+            android:text="+7 (930) 999-12-13"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_number_changer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Tap to change phone number"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_below="@+id/tv_number"
+            android:layout_marginStart="16dp"
+            />
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#C1C1C1"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_number_changer"
+            android:layout_marginStart="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:text="\@artem"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:layout_below="@+id/line_1"
+            android:layout_marginStart="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_username_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Username"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_below="@+id/tv_username"
+            android:layout_marginStart="16dp"
+            />
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#C1C1C1"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_username_label"
+            android:layout_marginStart="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_your_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:text="I'm fine :)"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:layout_below="@+id/line_2"
+            android:layout_marginStart="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_status_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Bio"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_below="@+id/tv_your_status"
+            android:layout_marginStart="16dp"
+            />
+
+        <View
+            android:id="@+id/line_3"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#C1C1C1"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_status_label"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Settings"
+            android:textColor="@color/telegram_blue"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_below="@+id/line_3"
+            android:layout_marginStart="16dp"
+            />
+
+        <TextView
+            android:id="@+id/btn_notification"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/settings"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_baseline_notifications_24"
+            android:text="Notifications and Sounds"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/btn_privacy"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:text="Privacy and Security"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_below="@+id/btn_notification"
+            android:layout_marginStart="16dp"/>
+
+        <View
+            android:id="@+id/line_4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#C1C1C1"
+            android:layout_below="@+id/btn_privacy"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/btn_data"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_baseline_data_usage_24"
+            android:text="Data and Storage"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_below="@+id/line_4"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/btn_chat_settings"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_baseline_chat_bubble_24"
+            android:text="Chat Settings"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_below="@+id/btn_data"
+            android:layout_marginStart="16dp"/>
+
+        <View
+            android:id="@+id/line_5"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#C1C1C1"
+            android:layout_below="@+id/btn_chat_settings"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/btn_chat_folders"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_baseline_folder_24"
+            android:text="Chat Folders"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_below="@+id/line_5"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/btn_devices"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_baseline_devices_24"
+            android:text="Devices"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_below="@+id/btn_chat_folders"
+            android:layout_marginStart="16dp"
+             />
+
+    </RelativeLayout>
+</ScrollView>
+</FrameLayout>

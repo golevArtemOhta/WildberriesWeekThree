@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelegramConstrLayFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/margin_start"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintGuide_begin="20dp"
+            android:orientation="vertical"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/margin_end"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintGuide_end="20dp"
+            android:orientation="vertical"/>
+
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header_telegram"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/im_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/im_btn_qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_qr_code_24"
+            app:layout_constraintEnd_toStartOf="@+id/im_btn_search"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/im_btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_search_24"
+            app:layout_constraintEnd_toStartOf="@+id/im_btn_dots"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/im_btn_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            app:layout_constraintEnd_toEndOf="@id/margin_end"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            app:layout_constraintTop_toBottomOf="@+id/im_btn_back">
+
+            <ImageView
+                android:id="@+id/im_avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                tools:src="@tools:sample/avatars" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Артем Голев"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginStart="30dp"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toEndOf="@+id/cardView_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/im_btn_back" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Online"
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="30dp"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toEndOf="@+id/cardView_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_for_camera"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="@id/margin_end"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <ImageView
+                android:id="@+id/im_camera"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                tools:layout_editor_absoluteX="280dp"
+                tools:layout_editor_absoluteY="135dp"
+                tools:src="@drawable/ic_baseline_camera_alt_24" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            android:layout_marginTop="10dp"
+            android:text="Account"
+            android:textColor="@color/telegram_blue"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/account"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:text="+7 (930) 999-12-13"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_number_changer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_number"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            android:layout_marginTop="3dp"
+            android:text="Tap to change phone number"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            />
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="#C1C1C1"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_number_changer"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/line_1"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:text="\@artem"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_username_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_username"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            android:layout_marginTop="3dp"
+            android:text="Username"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            />
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="#C1C1C1"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_username_label"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_your_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/line_2"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:text="I'm fine :)"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_status_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_your_status"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            android:layout_marginTop="3dp"
+            android:text="Bio"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            />
+
+        <View
+            android:id="@+id/line_3"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:background="#C1C1C1"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_status_label"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            app:layout_constraintEnd_toEndOf="@id/margin_end"/>
+
+        <TextView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/line_3"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            android:layout_marginTop="10dp"
+            android:text="Settings"
+            android:textColor="@color/telegram_blue"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/btn_notification"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_baseline_notifications_24"
+            android:text="Notifications and Sounds"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/margin_end"
+            app:layout_constraintStart_toStartOf="@id/margin_start"
+            app:layout_constraintTop_toBottomOf="@+id/settings"/>
+
+        <TextView
+            android:id="@+id/btn_privacy"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:text="Privacy and Security"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@id/margin_end"
+            app:layout_constraintStart_toStartOf="@id/margin_start"
+            app:layout_constraintTop_toBottomOf="@+id/btn_notification" />
+
+        <View
+            android:id="@+id/line_4"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="#C1C1C1"
+            app:layout_constraintTop_toBottomOf="@+id/btn_privacy"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/btn_data"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_baseline_data_usage_24"
+            android:text="Data and Storage"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@id/margin_end"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            app:layout_constraintTop_toBottomOf="@+id/btn_privacy"
+            />
+
+        <TextView
+            android:id="@+id/btn_chat_settings"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_baseline_chat_bubble_24"
+            android:text="Chat Settings"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@id/margin_end"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            app:layout_constraintTop_toBottomOf="@+id/btn_data" />
+
+        <View
+            android:id="@+id/line_5"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="#C1C1C1"
+            app:layout_constraintTop_toBottomOf="@+id/btn_chat_settings"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/btn_chat_folders"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_baseline_folder_24"
+            android:text="Chat Folders"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@id/margin_end"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            app:layout_constraintTop_toBottomOf="@+id/btn_chat_settings" />
+
+        <TextView
+            android:id="@+id/btn_devices"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_baseline_devices_24"
+            android:text="Devices"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@id/margin_end"
+            app:layout_constraintStart_toStartOf="@+id/margin_start"
+            app:layout_constraintTop_toBottomOf="@+id/btn_chat_folders" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</FrameLayout>
